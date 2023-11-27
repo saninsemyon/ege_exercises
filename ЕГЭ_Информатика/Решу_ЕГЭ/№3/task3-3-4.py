@@ -1,0 +1,11 @@
+a = int(input())
+b = int(input())
+c_sum = int(a) + int(b)
+c_diff = int(a) - int(b)
+c_mult = int(a) * int(b)
+c_div = int(a) // int(b)
+print(str(a) + ' + ' + str(b) + ' = ' + str(c_sum))
+print(str(a) + ' - ' + str(b) + ' = ' + str(c_diff))
+print(str(a) + ' * ' + str(b) + ' = ' + str(c_mult))
+print(str(a) + ' // ' + str(b) + ' = ' + str(c_div))
+
