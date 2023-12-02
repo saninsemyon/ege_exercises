@@ -2,8 +2,7 @@
   {
     "num": 1,
     "level": 1,
-    "done": 100,
-    "//comment": "All is cool"
+    "done": 100
   },
   {
     "num": 2,
@@ -23,7 +22,7 @@
   {
     "num": 5,
     "level": 1,
-    "done": 95
+    "done": 100
   },
   {
     "num": 6,
@@ -68,7 +67,7 @@
   {
     "num": 14,
     "level": 2,
-    "done": 50
+    "done": 99
   },
   {
     "num": 15,
