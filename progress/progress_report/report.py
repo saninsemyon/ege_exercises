@@ -46,7 +46,7 @@ class Command(enum.IntEnum):
 def usage():
     print("Usage: ./run.py <subject> <cmd> <task_number> <done>")
     print("I.e.:  ./run.py math")
-    print("       ./run.py inf add 2 80")
+    print("       ./run.py inf save 2 80")
     print("       ./run.py plot math")
 
 
