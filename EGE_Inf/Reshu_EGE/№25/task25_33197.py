@@ -5,13 +5,13 @@
 
 
 cnt = []
-for i in range(1000, 2001):
-    cnt.append(i - 1)
-    if (int(i ** (0.5)) ** 2) == i:
+for count in range(1000, 2001):
+    cnt.append(count - 1)
+    if (int(count ** (0.5)) ** 2) == count:
         cnt.append(0)
-        for j in range(2, i):
-            if i // j != 0 and i // j < 100:
-                cnt.append(j - (i // j))
+        for j in range(2, count):
+            if count // j != 0 and count // j < 100:
+                cnt.append(j - (count // j))
 if len(cnt) >= 3:
     print(cnt)
 

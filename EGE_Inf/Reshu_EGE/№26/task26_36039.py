@@ -5,11 +5,11 @@ for s in f:
     korobki.append(int(s))
 korobki.sort()
 korobki_sudno = []
-for i in range(len(korobki)):
-    if sum(korobki_sudno) + korobki[i] <= vmestimost:
-        korobki_sudno.append(korobki[i])
-    elif sum(korobki_sudno[:-1]) + korobki[i] <= vmestimost:
+for count in range(len(korobki)):
+    if sum(korobki_sudno) + korobki[count] <= vmestimost:
+        korobki_sudno.append(korobki[count])
+    elif sum(korobki_sudno[:-1]) + korobki[count] <= vmestimost:
         del korobki_sudno[-1]
-        korobki_sudno.append(korobki[i])
+        korobki_sudno.append(korobki[count])
 print(len(korobki_sudno), max(korobki_sudno))
 

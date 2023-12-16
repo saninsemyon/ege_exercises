@@ -1,13 +1,13 @@
 cnt = 0
-for i in range(2422000, 2422081):
+for count in range(2422000, 2422081):
     m = 0
-    for n in range(2, i):
-        if i % n == 0:
+    for n in range(2, count):
+        if count % n == 0:
             m += 1
             break
     if m == 0:
         cnt += 1
-        print(i, cnt)
+        print(count, cnt)
 
 # Ответ
 '''

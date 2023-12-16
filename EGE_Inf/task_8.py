@@ -77,8 +77,8 @@ from itertools import *
 
 m = []
 s = []
-for i in product('012345678', repeat=5):
-    s.append(int(i))
+for count in product('012345678', repeat=5):
+    s.append(int(count))
     for j in range(len(s)):
         c1 = 0
         for k in range(0, j + 1):

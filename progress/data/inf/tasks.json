@@ -1,0 +1,139 @@
+{
+  "tasks": [
+    {
+      "num": 1,
+      "level": 1,
+      "done": 100
+    },
+    {
+      "num": 2,
+      "level": 1,
+      "done": 100
+    },
+    {
+      "num": 3,
+      "level": 1,
+      "done": 100
+    },
+    {
+      "num": 4,
+      "level": 1,
+      "done": 100
+    },
+    {
+      "num": 5,
+      "level": 1,
+      "done": 100
+    },
+    {
+      "num": 6,
+      "level": 1,
+      "done": 1
+    },
+    {
+      "num": 7,
+      "level": 1,
+      "done": 80
+    },
+    {
+      "num": 8,
+      "level": 1,
+      "done": 80
+    },
+    {
+      "num": 9,
+      "level": 1,
+      "done": 50
+    },
+    {
+      "num": 10,
+      "level": 1,
+      "done": 35
+    },
+    {
+      "num": 11,
+      "level": 2,
+      "done": 40
+    },
+    {
+      "num": 12,
+      "level": 2,
+      "done": 80
+    },
+    {
+      "num": 13,
+      "level": 2,
+      "done": 50
+    },
+    {
+      "num": 14,
+      "level": 2,
+      "done": 99
+    },
+    {
+      "num": 15,
+      "level": 2,
+      "done": 60
+    },
+    {
+      "num": 16,
+      "level": 2,
+      "done": 70
+    },
+    {
+      "num": 17,
+      "level": 2,
+      "done": 20
+    },
+    {
+      "num": 18,
+      "level": 2,
+      "done": 0
+    },
+    {
+      "num": 19,
+      "level": 1,
+      "done": 95
+    },
+    {
+      "num": 20,
+      "level": 2,
+      "done": 80
+    },
+    {
+      "num": 21,
+      "level": 3,
+      "done": 80
+    },
+    {
+      "num": 22,
+      "level": 2,
+      "done": 90
+    },
+    {
+      "num": 23,
+      "level": 2,
+      "done": 0
+    },
+    {
+      "num": 24,
+      "level": 3,
+      "done": 0
+    },
+    {
+      "num": 25,
+      "level": 3,
+      "done": 85
+    },
+    {
+      "num": 26,
+      "level": 3,
+      "done": 0
+    },
+    {
+      "num": 27,
+      "level": 3,
+      "done": 0
+    }
+  ]
+}

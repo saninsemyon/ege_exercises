@@ -22,10 +22,10 @@ if lowercase_letter == 'да':
     chars += uppercase_letters
 if symbols1 == 'да':
     chars += punctuation
-for i in range(int(amount)):
+for count in range(int(amount)):
     if symbols2 == 'да':
-        for i in range(int(length)):
-            if chars.count(chars[i]) > 1:
-                while chars[i] == random.sample(chars):
-                    chars.replace(i, random.sample(chars))
+        for count in range(int(length)):
+            if chars.count(chars[count]) > 1:
+                while chars[count] == random.sample(chars):
+                    chars.replace(count, random.sample(chars))
     print(*random.sample(chars, int(length)), sep='')
