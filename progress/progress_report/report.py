@@ -233,7 +233,7 @@ def run_report(params):
     return report
 
 
-def runReports(p, subj_list):
+def run_reports_all(p, subj_list):
     dict_reports = {}
     for subj in subj_list:
         path_tasks = p.get_path_tasks(subj)
