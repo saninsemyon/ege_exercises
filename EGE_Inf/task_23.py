@@ -112,3 +112,83 @@ print(f(3, 14) * f(14, 18))
 
 # 360
 '''
+
+'''
+# рандом
+def f(x, y):
+    if x > y or x == 24:
+        return 0
+    if x == y:
+        return 1
+    return f(x + 1, y) + f(2 * x + 1, y)
+print(f(1, 25))
+
+# 10
+'''
+
+'''
+# статград 23.1
+
+def f(x, y):
+    if x > y:
+        return 0
+    if x == y:
+        return 1
+    return f(x + 1, y) + f(x * 2, y)
+print(f(1, 10) * f(10, 23))
+
+# 42
+'''
+
+'''
+# статград 23.13
+def f(x, y):
+    if x < y:
+        return 0
+    if x == y:
+        return 1
+    z = 0
+    if x > 4:
+        z = f(x % 4, y)
+    return f(x - 1, y) + f(x - 3, y) + z
+print(f(22, 2))
+
+# 1873
+'''
+
+'''
+# статград №23.4
+
+def c2(x):
+    if str(x)[-2] != 9:
+        return x + 10
+    return x
+
+
+def f(x, y):
+    if x > y:
+        return 0
+    if x == y:
+        return 1
+
+    return f(x + 1, y) + f(c2(x), y)
+
+
+print(f(12, 36))
+# 31
+'''
+
+'''
+# статград №23.24
+def f(x, y):
+    if x < y:
+        return 0
+    if x == y:
+        return 1
+    return f(x - 1, y) + f(x - 3, y) + f(x // 3, y)
+
+
+print(f(22, 2))
+
+#2196
+'''
