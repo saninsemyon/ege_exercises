@@ -1,36 +1,36 @@
 #!/usr/bin/env python3
+import sys
 
+from progress_report.json_utils import save_history
+from progress_report.utils import Command, usage, Chart
+from progress_report.params import Params
+from progress_report.plot import show_chart_activities, gapminder_progress
 from progress_report.report import *
 
-"""
-Whereas disregard and contempt for human rights have resulted.
-"""
+p = Params()
 
-
-report_data = ReportData()
-p = parse_args()
-
-path_datafiles = 'data/' + p.subject1 + '/'
-path_tasks = path_datafiles + p.source_tasks
-path_history = path_datafiles + p.source_history
-
-if os.path.exists(path_tasks):
-    json_tasks = read_json(path_tasks)
-    try:
-        json_tasks
-    except NameError:
-        print("Variable json_tasks WASN'T defined!")
-
-if p.cmd2 == Command.report.name:
-    data = set_report_data(json_tasks, report_data)
-    print_report(data)
-
-elif p.cmd2 == Command.save.name:
-    save_history(p)
-
-elif p.cmd2 == Command.chart.name:
-    from progress_report.chart import *
-
-    draw_plot(p)
+if p.parse_args():
+    if p.cmd1 == "help":
+        usage(p)
+    elif p.cmd1 == Command.report.name:
+        if p.exists_subject(p.cmd2):
+            report = run_report(p)
+            report.print_report()
+    elif p.cmd1 == Command.save.name:
+        save_history(p)
+    elif p.cmd1 == Command.chart.name:
+        if p.cmd2 == Chart.activities.name:
+            hist_dict = prepare_plot_hist_dict(p)
+            show_chart_activities(hist_dict)
+        elif p.cmd2 == Chart.gapminder.name:
+            gapminder_progress()
+        elif p.cmd2 == Chart.progress.name:
+            # chart_progress(weeks, progress)
+            # TODO
+            print("//TODO show_chart")
+    else:
+        print("Unknown command:", p.cmd1)
+        usage(p)
 else:
-    print("Unknown command:", p.cmd2)
+    print("Could not parse parameters:", sys.argv)
+    usage(p)
