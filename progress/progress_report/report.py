@@ -201,11 +201,9 @@ def prepare_plot_hist_dict(p):
         if os.path.exists(path_hist):
             json_history = read_json_from_file(path_hist)
             try:
-                json_history
+                _subjects, _tasks, _dates, _progress = set_history_dict(subj, json_history, task_nums)
             except NameError:
                 print("Variable json_tasks WASN'T defined!")
-        # weeks, progress = parse_history(json_history, task_nums)
-        _subjects, _tasks, _dates, _progress = set_history_dict(subj, json_history, task_nums)
 
         if "date" in hist_dict:
             hist_dict["subjects"].extend(_subjects)
