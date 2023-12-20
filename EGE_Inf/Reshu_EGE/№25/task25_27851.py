@@ -1,8 +1,8 @@
-for i in range(210235, 210301):
+for count in range(210235, 210301):
     m = []
     cnt = 0
-    for n in range(2, i):
-        if i % n == 0:
+    for n in range(2, count):
+        if count % n == 0:
             cnt += 1
             m.append(n)
         if cnt > 4:

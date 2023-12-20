@@ -14,7 +14,7 @@ n = int(f.readline())
 sum_min = sum_ave = sum_max = 0
 min_diff = 100000
 
-for i in range(n):
+for count in range(n):
     a, b, c = map(int, f.readline().split())
     #print(a, b, c)
     ma = max(a, b, c)

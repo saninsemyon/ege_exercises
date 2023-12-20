@@ -4,8 +4,8 @@ maximum = curent = 1
 sogl = 'b, c, d, f'
 glas = 'a, o'
 n = []
-for i in s:
-    if s[i] == sogl and s[i + 1] == sogl and s[i + 2] == glas:
+for count in s:
+    if s[count] == sogl and s[count + 1] == sogl and s[count + 2] == glas:
         n += 1
     else:
         n == 0

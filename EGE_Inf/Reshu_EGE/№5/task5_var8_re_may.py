@@ -1,6 +1,6 @@
-for i in range(128, 256):
-   s = i.readline()
+for count in range(128, 256):
+   s = count.readline()
    if int(s) == 0:
-       i.replace(0, 1)
+       count.replace(0, 1)
    else:
-       i.replace(1, 0)
+       count.replace(1, 0)
