@@ -42,14 +42,15 @@ def update_tasks(path_tasks, task_in):
 
     for _task in json_paths['tasks']:
         if task_in['num'] == _task['num']:
-            if task_in['done'] > _task['done']:
-                _task['done'] = task_in['done']
+            #if task_in['done'] > _task['done']:
+            _task['done'] = task_in['done']
+            _task['date_time'] = task_in['date_time']
 
-                return is_save_json(path_tasks, json_paths)
-            else:
-                print("The task in tasks.json has a larger or equal 'done' value for num:", task_in['num'], ", done:",
-                      str(_task['done']) + ">=" + str(task_in['done']))
-                return False
+            return is_save_json(path_tasks, json_paths)
+            #else:
+            #    print("The task in tasks.json has a larger or equal 'done' value for num:", task_in['num'], ", done:",
+            #          str(_task['done']) + ">=" + str(task_in['done']))
+            #    return False
     print("Could not find a task in tasks.json for num:", task_in['num'])
     return False
 

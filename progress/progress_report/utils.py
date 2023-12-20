@@ -11,6 +11,7 @@ class Command(Enum):
 
 class Chart(Enum):
     activities = 'activities'
+    fact = 'fact'
     progress = 'progress'
     gapminder = 'gapminder'
 

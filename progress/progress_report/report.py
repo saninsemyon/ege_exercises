@@ -216,14 +216,36 @@ def prepare_plot_hist_dict(p):
             hist_dict["date"] = _dates
             hist_dict["progress"] = _progress
 
-    try:
-        # from .plot import chart_progress
-        from .plot import show_chart_activities
-        # from .plot import gapminder_progress
-    except ImportError:
-        from plot import chart_progress
-
     return hist_dict
+
+
+def prepare_plot_fact_dict(p):
+    fact_dict = {}
+    subj = 'inf'
+    path_tasks = p.get_path_tasks(subj)
+    json_tasks = read_json_from_file_except(path_tasks)
+    tasks = []
+    levels = []
+    progress = []
+    dates = []
+
+    for it in json_tasks['tasks']:
+        tasks.append(it['num'])
+        levels.append(it['level'])
+        progress.append(it['done'])
+
+        if 'date_time' in it:
+            _dt_utc = it['date_time']
+            _dt = dateparser.parse(_dt_utc).date()
+            dates.append(_dt)
+        else: dates.append("")
+
+    fact_dict["tasks"] = tasks
+    fact_dict["levels"] = levels
+    fact_dict["progress"] = progress
+    fact_dict["dates"] = dates
+
+    return fact_dict
 
 
 def run_report(params):

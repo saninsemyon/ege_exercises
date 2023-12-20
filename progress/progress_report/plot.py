@@ -35,3 +35,15 @@ def show_chart_activities(hist_dict):
     # fig = px.scatter(df.query("subjects=='inf'"), x="dates", y="subjects", size="progress", color="tasks", title="EGE Progress Chart")
     fig = px.bar(df, x="date", y="progress", color="subjects", hover_name="tasks", title="EGE Progress Chart")
     fig.show()
+
+
+def show_chart_fact(hist_dict):
+    df = pd.DataFrame(
+        hist_dict
+    )
+    print(df)
+    print(df.info())
+
+    # fig = px.scatter(df.query("subjects=='inf'"), x="dates", y="subjects", size="progress", color="tasks", title="EGE Progress Chart")
+    fig = px.bar(df, x="tasks", y="progress", color="levels", hover_name="tasks", title="EGE Fact Chart")
+    fig.show()

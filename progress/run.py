@@ -4,7 +4,7 @@ import sys
 from progress_report.json_utils import save_history
 from progress_report.utils import Command, usage, Chart
 from progress_report.params import Params
-from progress_report.plot import show_chart_activities, gapminder_progress
+from progress_report.plot import show_chart_activities, show_chart_fact, gapminder_progress
 from progress_report.report import *
 
 p = Params()
@@ -22,6 +22,9 @@ if p.parse_args():
         if p.cmd2 == Chart.activities.name:
             hist_dict = prepare_plot_hist_dict(p)
             show_chart_activities(hist_dict)
+        elif p.cmd2 == Chart.fact.name:
+            fact_dict = prepare_plot_fact_dict(p)
+            show_chart_fact(fact_dict)
         elif p.cmd2 == Chart.gapminder.name:
             gapminder_progress()
         elif p.cmd2 == Chart.progress.name:
